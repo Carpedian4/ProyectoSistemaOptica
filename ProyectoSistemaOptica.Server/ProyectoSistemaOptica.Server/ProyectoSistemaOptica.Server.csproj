@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ProyectoSistemaOptica.BD\ProyectoSistemaOptica.BD.csproj" />
+    <ProjectReference Include="..\..\ProyectoSistemaOptica.Repositorio\ProyectoSistemaOptica.Repositorio.csproj" />
+    <ProjectReference Include="..\..\ProyectoSistemaOptica.Servicio\ProyectoSistemaOptica.Servicio.csproj" />
+    <ProjectReference Include="..\..\ProyectoSistemaOptica.Shared\ProyectoSistemaOptica.Shared.csproj" />
+    <ProjectReference Include="..\ProyectoSistemaOptica.Server.Client\ProyectoSistemaOptica.Server.Client.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.4" />
+  </ItemGroup>
+
+</Project>

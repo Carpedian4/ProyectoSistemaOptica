@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36408.4 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoSistemaOptica.Server", "ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Server.csproj", "{07DB5AB5-948D-438F-9702-E0425A184837}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoSistemaOptica.Server.Client", "ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Server.Client\ProyectoSistemaOptica.Server.Client.csproj", "{D2028497-9946-4FB9-B698-8079B68E1AB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoSistemaOptica.BD", "ProyectoSistemaOptica.BD\ProyectoSistemaOptica.BD.csproj", "{EF382E59-BB74-4366-9B09-87DB597F9FF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoSistemaOptica.Shared", "ProyectoSistemaOptica.Shared\ProyectoSistemaOptica.Shared.csproj", "{D95DC6C4-ACE1-453E-9A25-BE89A4F0331F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoSistemaOptica.Servicio", "ProyectoSistemaOptica.Servicio\ProyectoSistemaOptica.Servicio.csproj", "{CE7226E7-AA0E-438F-976E-D96C8F0749E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoSistemaOptica.Repositorio", "ProyectoSistemaOptica.Repositorio\ProyectoSistemaOptica.Repositorio.csproj", "{35411BE7-B45F-4811-8538-2596E10596D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07DB5AB5-948D-438F-9702-E0425A184837}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07DB5AB5-948D-438F-9702-E0425A184837}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07DB5AB5-948D-438F-9702-E0425A184837}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07DB5AB5-948D-438F-9702-E0425A184837}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2028497-9946-4FB9-B698-8079B68E1AB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2028497-9946-4FB9-B698-8079B68E1AB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2028497-9946-4FB9-B698-8079B68E1AB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2028497-9946-4FB9-B698-8079B68E1AB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF382E59-BB74-4366-9B09-87DB597F9FF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF382E59-BB74-4366-9B09-87DB597F9FF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF382E59-BB74-4366-9B09-87DB597F9FF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF382E59-BB74-4366-9B09-87DB597F9FF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D95DC6C4-ACE1-453E-9A25-BE89A4F0331F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D95DC6C4-ACE1-453E-9A25-BE89A4F0331F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D95DC6C4-ACE1-453E-9A25-BE89A4F0331F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D95DC6C4-ACE1-453E-9A25-BE89A4F0331F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE7226E7-AA0E-438F-976E-D96C8F0749E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE7226E7-AA0E-438F-976E-D96C8F0749E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE7226E7-AA0E-438F-976E-D96C8F0749E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE7226E7-AA0E-438F-976E-D96C8F0749E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35411BE7-B45F-4811-8538-2596E10596D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35411BE7-B45F-4811-8538-2596E10596D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35411BE7-B45F-4811-8538-2596E10596D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35411BE7-B45F-4811-8538-2596E10596D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9BC4BC00-38C2-4731-95FF-CEFDD01F8D8A}
+	EndGlobalSection
+EndGlobal

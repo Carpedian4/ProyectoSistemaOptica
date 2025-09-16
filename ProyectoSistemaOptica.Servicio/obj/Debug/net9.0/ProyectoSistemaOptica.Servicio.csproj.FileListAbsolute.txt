@@ -1,0 +1,15 @@
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Servicio\bin\Debug\net9.0\ProyectoSistemaOptica.Servicio.deps.json
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Servicio\bin\Debug\net9.0\ProyectoSistemaOptica.Servicio.dll
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Servicio\bin\Debug\net9.0\ProyectoSistemaOptica.Servicio.pdb
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Servicio\bin\Debug\net9.0\ProyectoSistemaOptica.Shared.dll
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Servicio\bin\Debug\net9.0\ProyectoSistemaOptica.Shared.pdb
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Servicio\obj\Debug\net9.0\ProyectoSistemaOptica.Servicio.csproj.AssemblyReference.cache
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Servicio\obj\Debug\net9.0\ProyectoSistemaOptica.Servicio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Servicio\obj\Debug\net9.0\ProyectoSistemaOptica.Servicio.AssemblyInfoInputs.cache
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Servicio\obj\Debug\net9.0\ProyectoSistemaOptica.Servicio.AssemblyInfo.cs
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Servicio\obj\Debug\net9.0\ProyectoSistemaOptica.Servicio.csproj.CoreCompileInputs.cache
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Servicio\obj\Debug\net9.0\Proyecto.7D929354.Up2Date
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Servicio\obj\Debug\net9.0\ProyectoSistemaOptica.Servicio.dll
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Servicio\obj\Debug\net9.0\refint\ProyectoSistemaOptica.Servicio.dll
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Servicio\obj\Debug\net9.0\ProyectoSistemaOptica.Servicio.pdb
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Servicio\obj\Debug\net9.0\ref\ProyectoSistemaOptica.Servicio.dll

@@ -1,0 +1,11 @@
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Shared\bin\Debug\net9.0\ProyectoSistemaOptica.Shared.deps.json
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Shared\bin\Debug\net9.0\ProyectoSistemaOptica.Shared.dll
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Shared\bin\Debug\net9.0\ProyectoSistemaOptica.Shared.pdb
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Shared\obj\Debug\net9.0\ProyectoSistemaOptica.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Shared\obj\Debug\net9.0\ProyectoSistemaOptica.Shared.AssemblyInfoInputs.cache
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Shared\obj\Debug\net9.0\ProyectoSistemaOptica.Shared.AssemblyInfo.cs
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Shared\obj\Debug\net9.0\ProyectoSistemaOptica.Shared.csproj.CoreCompileInputs.cache
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Shared\obj\Debug\net9.0\ProyectoSistemaOptica.Shared.dll
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Shared\obj\Debug\net9.0\refint\ProyectoSistemaOptica.Shared.dll
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Shared\obj\Debug\net9.0\ProyectoSistemaOptica.Shared.pdb
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Shared\obj\Debug\net9.0\ref\ProyectoSistemaOptica.Shared.dll

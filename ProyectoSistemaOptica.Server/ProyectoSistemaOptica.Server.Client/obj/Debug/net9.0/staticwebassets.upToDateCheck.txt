@@ -1,0 +1,4 @@
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Server.Client\wwwroot\appsettings.json
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Server.Client\wwwroot\appsettings.Development.json
+wwwroot\appsettings.Development.json
+wwwroot\appsettings.json
