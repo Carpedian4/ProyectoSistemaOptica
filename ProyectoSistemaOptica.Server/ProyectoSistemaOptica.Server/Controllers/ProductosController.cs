@@ -1,27 +1,31 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using ProyectoSistemaOptica.BD.Datos;
 using ProyectoSistemaOptica.BD.Datos.Entity;
+using ProyectoSistemaOptica.Repositorio.Repositorios;
+using ProyectoSistemaOptica.Shared.DTO;
 
 namespace ProyectoSistemaOptica.Server.Controllers
 {
-[ApiController]
+    [ApiController]
     [Route("api/[controller]")]
-    public class ProductoController : ControllerBase
+    public class ProductosController : ControllerBase
     {
-        private readonly AppDbContext context;
 
-        public ProductoController(AppDbContext context)
+        private readonly IProductoRepositorio _productoRepositorio;
+
+        public ProductosController(IProductoRepositorio productoRepositorio)
         {
-            this.context = context;
+            _productoRepositorio = productoRepositorio;
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<Producto>>> GetProductos()
+        // RUTA: GET /api/Productos
+        public async Task<ActionResult<List<ProductoDTO>>> GetProductos()
         {
-            var productos = await context.Productos.ToListAsync();
+            //  método específico del repositorio
+            var productos = await _productoRepositorio.GetProductosAsync(); 
+
             if (productos == null || productos.Count == 0)
-                return NotFound("No hay productos cargados");
+                return NotFound("No hay productos cargados.");
 
             return Ok(productos);
         }

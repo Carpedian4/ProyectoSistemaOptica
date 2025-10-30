@@ -1,15 +1,15 @@
 [
   {
-    "ContainingType": "ProyectoSistemaOptica.Server.Controllers.ProductoController",
+    "ContainingType": "ProyectoSistemaOptica.Server.Controllers.ProductosController",
     "Method": "GetProductos",
-    "RelativePath": "api/Producto",
+    "RelativePath": "api/Productos",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[ProyectoSistemaOptica.BD.Datos.Entity.Producto, ProyectoSistemaOptica.BD, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[ProyectoSistemaOptica.Shared.DTO.ProductoDTO, ProyectoSistemaOptica.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -18,6 +18,22 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "ProyectoSistemaOptica.Server.Controllers.VentaController",
+    "Method": "RegistrarVenta",
+    "RelativePath": "api/Venta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ventaDto",
+        "Type": "ProyectoSistemaOptica.DTOs.RegistrarVentaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "ProyectoSistemaOptica.Server.Controllers.VentaController",
@@ -29,33 +45,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[ProyectoSistemaOptica.BD.Datos.Entity.Venta, ProyectoSistemaOptica.BD, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "ProyectoSistemaOptica.Server.Controllers.VentaController",
-    "Method": "PostVenta",
-    "RelativePath": "api/Venta",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "venta",
-        "Type": "ProyectoSistemaOptica.BD.Datos.Entity.Venta",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Int32",
+        "Type": "System.Collections.Generic.List\u00601[[ProyectoSistemaOptica.Shared.DTO.VentaListadoDTO, ProyectoSistemaOptica.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -79,6 +69,16 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "ProyectoSistemaOptica.BD.Datos.Entity.Venta",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

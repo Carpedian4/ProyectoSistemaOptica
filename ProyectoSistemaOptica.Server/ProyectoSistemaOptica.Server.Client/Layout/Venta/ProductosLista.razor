@@ -1,0 +1,62 @@
+﻿@page "/productos"
+@using ProyectoSistemaOptica.Shared.DTO 
+@inject HttpClient Http
+
+<h3>Catálogo de Productos</h3>
+
+@if (productos == null)
+{
+    <p><em>Cargando productos...</em></p>
+}
+else if (productos.Count == 0)
+{
+    <p>No hay productos cargados para mostrar.</p>
+}
+else
+{
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Stock</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var p in productos)
+            {
+                <tr>
+                    <td>@p.Id</td>
+                    <td>@p.Nombre</td>
+                    <td>@p.Stock</td>
+                    <td>$@p.PrecioUnitario.ToString("N2")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+
+    private List<ProductoDTO>? productos;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            productos = await Http.GetFromJsonAsync<List<ProductoDTO>>("api/Productos");
+
+            if (productos == null)
+            {
+                productos = new List<ProductoDTO>();
+            }
+        }
+        catch (Exception ex)
+        {
+            // Opcional: Loguear el error para diagnóstico
+            Console.WriteLine($"Error al cargar productos: {ex.Message}");
+            productos = new List<ProductoDTO>();
+        }
+    }
+}

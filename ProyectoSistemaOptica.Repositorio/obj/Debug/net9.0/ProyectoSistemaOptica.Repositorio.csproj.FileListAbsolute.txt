@@ -1,8 +1,3 @@
-C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Repositorio\obj\Debug\net9.0\ProyectoSistemaOptica.Repositorio.csproj.AssemblyReference.cache
-C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Repositorio\obj\Debug\net9.0\ProyectoSistemaOptica.Repositorio.GeneratedMSBuildEditorConfig.editorconfig
-C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Repositorio\obj\Debug\net9.0\ProyectoSistemaOptica.Repositorio.AssemblyInfoInputs.cache
-C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Repositorio\obj\Debug\net9.0\ProyectoSistemaOptica.Repositorio.AssemblyInfo.cs
-C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Repositorio\obj\Debug\net9.0\ProyectoSistemaOptica.Repositorio.csproj.CoreCompileInputs.cache
 C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Repositorio\bin\Debug\net9.0\ProyectoSistemaOptica.Repositorio.deps.json
 C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Repositorio\bin\Debug\net9.0\ProyectoSistemaOptica.Repositorio.dll
 C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Repositorio\bin\Debug\net9.0\ProyectoSistemaOptica.Repositorio.pdb
@@ -10,6 +5,12 @@ C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Repositorio
 C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Repositorio\bin\Debug\net9.0\ProyectoSistemaOptica.Shared.dll
 C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Repositorio\bin\Debug\net9.0\ProyectoSistemaOptica.BD.pdb
 C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Repositorio\bin\Debug\net9.0\ProyectoSistemaOptica.Shared.pdb
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Repositorio\obj\Debug\net9.0\ProyectoSistemaOptica.Repositorio.csproj.AssemblyReference.cache
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Repositorio\obj\Debug\net9.0\ProyectoSistemaOptica.Repositorio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Repositorio\obj\Debug\net9.0\ProyectoSistemaOptica.Repositorio.AssemblyInfoInputs.cache
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Repositorio\obj\Debug\net9.0\ProyectoSistemaOptica.Repositorio.AssemblyInfo.cs
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Repositorio\obj\Debug\net9.0\ProyectoSistemaOptica.Repositorio.csproj.CoreCompileInputs.cache
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Repositorio\obj\Debug\net9.0\ProyectoSistemaOptica.Repositorio.sourcelink.json
 C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Repositorio\obj\Debug\net9.0\Proyecto.1C76007B.Up2Date
 C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Repositorio\obj\Debug\net9.0\ProyectoSistemaOptica.Repositorio.dll
 C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Repositorio\obj\Debug\net9.0\refint\ProyectoSistemaOptica.Repositorio.dll

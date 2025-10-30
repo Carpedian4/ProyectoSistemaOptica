@@ -1,10 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using ProyectoSistemaOptica.BD.Datos;
 using ProyectoSistemaOptica.BD.Datos.Entity;
-using System.Linq;
-using System.Threading.Tasks;
-using static Microsoft.AspNetCore.Components.WebAssembly.HotReload.WebAssemblyHotReload;
+using ProyectoSistemaOptica.DTOs;
+using ProyectoSistemaOptica.Repositorio.Repositorios;
+using ProyectoSistemaOptica.Shared.DTO;
 
 namespace ProyectoSistemaOptica.Server.Controllers
 {
@@ -12,45 +10,52 @@ namespace ProyectoSistemaOptica.Server.Controllers
     [Route("api/[controller]")]
     public class VentaController : ControllerBase
     {
-        private readonly AppDbContext context;
+        private readonly IVentaRepositorio _ventaRepositorio;
 
-        public VentaController(AppDbContext context)
+        public VentaController(IVentaRepositorio ventaRepositorio)
         {
-            this.context = context;
+            _ventaRepositorio = ventaRepositorio;
         }
 
-        // GET: api/Venta → lista todas las ventas SIN detalles
+        // RUTA: POST /api/Venta
+        [HttpPost]
+        public async Task<IActionResult> RegistrarVenta([FromBody] RegistrarVentaDTO ventaDto)
+        {
+            try
+            {
+                var nuevaVenta = await _ventaRepositorio.RegistrarVentaAsync(ventaDto);           
+                return Created($"/api/Venta/{nuevaVenta.Id}", new { Mensaje = $"Venta registrada con éxito. Nro: {nuevaVenta.Id}" });
+            }
+            catch (InvalidOperationException ex)
+            {
+                return Conflict(ex.Message); 
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "Error interno del sistema al registrar la venta. Intente de nuevo.");
+            }
+        }
+
+        // RUTA: GET /api/Venta
         [HttpGet]
-        public async Task<ActionResult<List<Venta>>> GetVentas()
+        public async Task<ActionResult<List<VentaListadoDTO>>> GetVentas()
         {
-            var ventas = await context.Ventas.ToListAsync();
-            if (ventas == null)
-                return NotFound($"No hay ventas cargadas aun");
-            return Ok(ventas);
+            var ventasDTO = await _ventaRepositorio.GetVentasListaAsync();
+
+            if (ventasDTO == null || !ventasDTO.Any())
+                return NotFound("No hay ventas cargadas aún.");
+            return Ok(ventasDTO);
         }
 
-        // GET: api/Venta/5 → busca una venta por Id CON detalles
+        // RUTA: GET /api/Venta/{id}
+  
         [HttpGet("{id}")]
-        public async Task<ActionResult> GetVenta(int id)
-        {
-            var venta = await context.Ventas
-                                     .Include(v => v.Detalles)
-                                     
-                                     .FirstOrDefaultAsync(v => v.Id == id);
-
+        public async Task<ActionResult<Venta>> GetVenta(int id)
+        {          
+            var venta = await _ventaRepositorio.GetVentaPorIdAsync(id);
             if (venta == null)
                 return NotFound($"No se encontró la venta con el Id: {id}.");
-
             return Ok(venta);
-        }
-
-        // POST: api/Venta → registra una venta
-        [HttpPost]
-        public async Task<int> PostVenta(Venta venta)
-        {
-            await context.Ventas.AddAsync(venta);
-            await context.SaveChangesAsync();
-            return venta.Id;
         }
     }
 }

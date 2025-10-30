@@ -1,0 +1,272 @@
+﻿
+
+@page "/registrarventa"
+@using ProyectoSistemaOptica.Shared.DTO
+@inject HttpClient Http
+
+<div>
+    <h1>Registre la venta</h1>
+
+    <div style="display: flex; gap: 20px;">
+
+        <div style="flex: 7;">
+            <h2>Catálogo de Productos</h2>
+
+            @if (productosDisponibles == null)
+            {
+                <p>Cargando productos...</p>
+            }
+            else
+            {
+                <table style="width: 100%; border-collapse: collapse; border: 1px solid #ccc;">
+                    <thead>
+                        <tr style="background-color: #eee;">
+                            <th style="padding: 5px; border: 1px solid #ccc;">Nombre</th>
+                            <th style="padding: 5px; border: 1px solid #ccc;">Precio</th>
+                            <th style="padding: 5px; border: 1px solid #ccc;">Cantidad</th>
+                            <th style="padding: 5px; border: 1px solid #ccc;">Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var p in productosDisponibles)
+                        {
+                            <tr>
+                                <td style="padding: 5px; border: 1px solid #ccc;">@p.Nombre</td>
+                                <td style="padding: 5px; border: 1px solid #ccc;">$@p.PrecioUnitario.ToString("N2")</td>
+                                <td style="padding: 5px; border: 1px solid #ccc;">
+                                    <input type="number" @bind-value="p.CantidadSeleccionada" min="1" max="@p.Stock" style="width: 60px;" />
+                                </td>
+                                <td style="padding: 5px; border: 1px solid #ccc;">
+                                    <button @onclick="() => AddToCart(p)"
+                                            disabled="@(p.CantidadSeleccionada <= 0 || p.CantidadSeleccionada > p.Stock)">
+                                        Agregar
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+        </div>
+
+        <div style="flex: 5; padding: 10px; border: 1px solid #aaa;">
+            <h2>2. Resumen de Venta</h2>
+
+            @if (ventaActual.Detalles.Count == 0)
+            {
+                <p>El carrito está vacío.</p>
+            }
+            else
+            {
+                <table style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr style="background-color: #ddd;">
+                            <th style="padding: 5px;">Producto</th>
+                            <th style="padding: 5px;">Cant.</th>
+                            <th style="padding: 5px;">Subtotal</th>
+                            <th style="padding: 5px;"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var detalle in detallesLocales)
+                        {
+                            <tr>
+                                <td style="padding: 5px; border-top: 1px dashed #ccc;">@detalle.NombreProducto</td>
+                                <td style="padding: 5px; border-top: 1px dashed #ccc;">@detalle.Cantidad</td>
+                                <td style="padding: 5px; border-top: 1px dashed #ccc;">$@detalle.Subtotal.ToString("N2")</td>
+                                <td style="padding: 5px; border-top: 1px dashed #ccc;">
+                                    <button @onclick="() => RemoveFromCart(detalle)">X</button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr style="background-color: #eee;">
+                            <td colspan="2" style="padding: 5px; border-top: 2px solid #000; text-align: right;"><strong>TOTAL:</strong></td>
+                            <td colspan="2" style="padding: 5px; border-top: 2px solid #000;">
+                                <strong>$@TotalVenta.ToString("N2")</strong>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <button style="margin-top: 15px; padding: 10px 20px; font-size: 16px;" @onclick="RegisterSale" disabled="@isSaving">
+                    @if (isSaving)
+                    {
+                        <span>Registrando...</span>
+                    }
+                    else
+                    {
+                        <span>Finalizar Venta</span>
+                    }
+                </button>
+            }
+        </div>
+    </div>
+
+    @if (!string.IsNullOrEmpty(message))
+    {
+        <p style="margin-top: 20px; padding: 10px; border: 1px solid @(message.Contains("Error") ? "red" : "green"); background-color: @(message.Contains("Error") ? "#fdd" : "#dfd");">@message</p>
+    }
+</div>
+
+@code {
+    
+    public class ProductoSeleccionable : ProductoDTO
+    {
+        public int CantidadSeleccionada { get; set; } = 1; // Para el input de cantidad
+    }
+
+    public class DetalleLocal
+    {
+        // Solo para mostrar en el carrito
+        public int ProductoId { get; set; }
+        public string NombreProducto { get; set; } = string.Empty;
+        public int Cantidad { get; set; }
+        public decimal Subtotal { get; set; }
+    }
+
+    // 2. Variables de Estado
+    private List<ProductoSeleccionable>? productosDisponibles; // Catálogo
+    private RegistrarVentaDTO ventaActual = new RegistrarVentaDTO(); 
+    private DetalleLocal[] detallesLocales = Array.Empty<DetalleLocal>(); // Carrito 
+
+    private bool isSaving = false;
+    private string message = string.Empty;
+
+    // 3. Propiedad Calculada para el Total
+    private decimal TotalVenta => detallesLocales.Sum(d => d.Subtotal);
+
+    // Método para buscar el precio
+    private decimal GetProductoPrice(int id) =>
+        productosDisponibles?.FirstOrDefault(p => p.Id == id)?.PrecioUnitario ?? 0m;
+
+
+    // Carga los productos
+    protected override async Task OnInitializedAsync()
+    {
+  
+        ventaActual = new RegistrarVentaDTO();
+        detallesLocales = Array.Empty<DetalleLocal>();
+        message = string.Empty;
+
+        try
+        {
+            string urlProductos = $"{"https://localhost:7016"}/api/Productos";
+            var productos = await Http.GetFromJsonAsync<List<ProductoDTO>>("api/Productos");
+
+            
+            productosDisponibles = productos?.Select(p => new ProductoSeleccionable
+            {
+                Id = p.Id,
+                Nombre = p.Nombre,
+                Stock = p.Stock,
+                PrecioUnitario = p.PrecioUnitario,
+            }).ToList() ?? new List<ProductoSeleccionable>();
+
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error al cargar productos: {ex.Message}");
+            message = $"Error al cargar productos: {ex.Message}";
+            productosDisponibles = new List<ProductoSeleccionable>();
+        }
+    }
+
+
+ 
+    private void AddToCart(ProductoSeleccionable producto)
+    {
+        message = string.Empty;
+
+      // Revisa si el producto ya está en el carrito para sumar cantidades.
+        var existingDetailDTO = ventaActual.Detalles.FirstOrDefault(d => d.ProductoId == producto.Id);
+
+        if (existingDetailDTO != null)
+        {
+            existingDetailDTO.Cantidad += producto.CantidadSeleccionada;
+        }
+        else
+        {
+
+            ventaActual.Detalles.Add(new DetalleVentaDTO
+            {
+                ProductoId = producto.Id,
+                Cantidad = producto.CantidadSeleccionada
+            });
+        }
+
+   
+        UpdateLocalDetails();
+        producto.CantidadSeleccionada = 1; // Resetea el input
+    }
+
+    private void RemoveFromCart(DetalleLocal detalleToRemove)
+    {
+        message = string.Empty;
+
+  
+        var detalleDTO = ventaActual.Detalles.FirstOrDefault(d => d.ProductoId == detalleToRemove.ProductoId);
+        if (detalleDTO != null)
+        {
+            ventaActual.Detalles.Remove(detalleDTO);
+            UpdateLocalDetails();
+        }
+    }
+
+
+    private void UpdateLocalDetails()
+    {
+  
+        detallesLocales = ventaActual.Detalles.Select(d =>
+        {
+            var p = productosDisponibles?.FirstOrDefault(pd => pd.Id == d.ProductoId);
+            return new DetalleLocal
+            {
+                ProductoId = d.ProductoId,
+                Cantidad = d.Cantidad,
+                NombreProducto = p?.Nombre ?? "Producto Desconocido",
+                Subtotal = d.Cantidad * (p?.PrecioUnitario ?? 0m)
+            };
+        }).ToArray();
+    }
+
+
+    private async Task RegisterSale()
+    {
+        isSaving = true;
+        message = string.Empty;
+
+        if (ventaActual.Detalles.Count == 0)
+        {
+            message = "Error: El carrito está vacío. Añada productos.";
+            isSaving = false;
+            return;
+        }
+
+        try
+        {
+
+            var response = await Http.PostAsJsonAsync("api/Venta", ventaActual);
+
+            if (response.IsSuccessStatusCode)
+            {
+                message = "¡Venta registrada con éxito!";
+                await OnInitializedAsync(); 
+            }
+            else
+            {
+                var errorContent = await response.Content.ReadAsStringAsync();
+                message = $"Error al registrar la venta: {response.StatusCode}. Detalle: {errorContent}";
+            }
+        }
+        catch (Exception ex)
+        {
+            message = $"Error de conexión: {ex.Message}";
+        }
+        finally
+        {
+            isSaving = false;
+        }
+    }
+}

@@ -1,24 +1,34 @@
 using Microsoft.EntityFrameworkCore;
-using ProyectoSistemaOptica.BD;
 using ProyectoSistemaOptica.BD.Datos;
-using ProyectoSistemaOptica.Server.Client.Pages;
+using ProyectoSistemaOptica.BD.Datos.Entity;
+using ProyectoSistemaOptica.Repositorio.Repositorios;
 using ProyectoSistemaOptica.Server.Components;
-using System.Text.Json.Serialization; // <- para ReferenceHandler
+using System.Text.Json.Serialization;
 
-// configura el constructor de la aplicacion 
 var builder = WebApplication.CreateBuilder(args);
 
 #region configura el constructor de la aplicacion y sus servicios 
 
-// Registramos los controladores y configuramos JSON para ignorar ciclos
+
+builder.Services.AddHttpClient("BlazorClient", client =>
+{
+    client.BaseAddress = new Uri("https://localhost:5015/");
+});
+
+// Registrar el HttpClient como scoped para que pueda ser inyectado con @inject
+builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("BlazorClient"));
+
+// 2. Tu configuración de Controllers (se mantiene)
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
         options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
     });
 
+// 3. Tu configuración de Swagger (se mantiene)
 builder.Services.AddSwaggerGen();
 
+// 4. Tu configuración de DBContext y Repositorios (se mantiene)
 var ConnectionStrings = builder.Configuration.GetConnectionString("ConnSqlServer")
                                ?? throw new InvalidOperationException(
                                    "El string de conexion no existe.");
@@ -26,7 +36,10 @@ var ConnectionStrings = builder.Configuration.GetConnectionString("ConnSqlServer
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(ConnectionStrings));
 
-// Add services to the container.
+builder.Services.AddScoped<IProductoRepositorio, ProductoRepositorio>();
+builder.Services.AddScoped<IVentaRepositorio, VentaRepositorio>();
+
+// 5. Tu configuración de Blazor Components (se mantiene)
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
@@ -57,6 +70,8 @@ app.UseHttpsRedirection();
 app.UseAntiforgery();
 
 app.MapStaticAssets();
+
+// Mapeo final de la aplicación Blazor
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode()
     .AddInteractiveWebAssemblyRenderMode()

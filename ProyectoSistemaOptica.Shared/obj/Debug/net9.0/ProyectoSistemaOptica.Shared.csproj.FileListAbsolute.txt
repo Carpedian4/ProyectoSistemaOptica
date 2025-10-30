@@ -5,6 +5,7 @@ C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Shared\obj\
 C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Shared\obj\Debug\net9.0\ProyectoSistemaOptica.Shared.AssemblyInfoInputs.cache
 C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Shared\obj\Debug\net9.0\ProyectoSistemaOptica.Shared.AssemblyInfo.cs
 C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Shared\obj\Debug\net9.0\ProyectoSistemaOptica.Shared.csproj.CoreCompileInputs.cache
+C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Shared\obj\Debug\net9.0\ProyectoSistemaOptica.Shared.sourcelink.json
 C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Shared\obj\Debug\net9.0\ProyectoSistemaOptica.Shared.dll
 C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Shared\obj\Debug\net9.0\refint\ProyectoSistemaOptica.Shared.dll
 C:\Modelado y Arq\ProyectoSistemaOptica.Server\ProyectoSistemaOptica.Shared\obj\Debug\net9.0\ProyectoSistemaOptica.Shared.pdb

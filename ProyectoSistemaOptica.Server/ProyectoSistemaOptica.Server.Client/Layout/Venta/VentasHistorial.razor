@@ -1,0 +1,64 @@
+﻿@page "/historial-ventas"
+@using ProyectoSistemaOptica.BD.Datos.Entity;
+@using ProyectoSistemaOptica.Shared.DTO;
+@inject HttpClient Http
+
+<h3>Historial de Ventas Registradas</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID Venta</th>
+            <th>Fecha</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (ventas == null)
+        {
+            <tr><td colspan="3"><em>Cargando historial...</em></td></tr>
+        }
+        else if (!ventas.Any())
+        {
+            <tr><td colspan="3">No se han registrado ventas aún.</td></tr>
+        }
+        else
+        {
+            @foreach (var venta in ventas)
+            {
+                <tr>
+                    <td>@venta.Id</td>
+                    <td>@venta.Fecha.ToShortDateString()</td>
+                    <td>@venta.Total.ToString("C")</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+
+    
+@code {
+
+    List<VentaListadoDTO>? ventas;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        await VerVentas();
+    }
+
+    private async Task VerVentas()
+    {
+        try
+        {
+
+            ventas = await Http.GetFromJsonAsync<List<VentaListadoDTO>>("api/Venta");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error al cargar ventas: {ex.Message}");
+            ventas = new List<VentaListadoDTO>();
+        }
+    }
+}

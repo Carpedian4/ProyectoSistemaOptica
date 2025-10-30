@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\ProyectoSistemaOptica.BD\ProyectoSistemaOptica.BD.csproj" />
     <ProjectReference Include="..\..\ProyectoSistemaOptica.Servicio\ProyectoSistemaOptica.Servicio.csproj" />
     <ProjectReference Include="..\..\ProyectoSistemaOptica.Shared\ProyectoSistemaOptica.Shared.csproj" />
   </ItemGroup>

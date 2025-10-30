@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "C:\\Modelado y Arq\\ProyectoSistemaOptica.Server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{07DB5AB5-948D-438F-9702-E0425A184837}|ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server.csproj|c:\\modelado y arq\\proyectosistemaoptica.server\\proyectosistemaoptica.server\\proyectosistemaoptica.server\\controllers\\ventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07DB5AB5-948D-438F-9702-E0425A184837}|ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server.csproj|solutionrelative:proyectosistemaoptica.server\\proyectosistemaoptica.server\\controllers\\ventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D95DC6C4-ACE1-453E-9A25-BE89A4F0331F}|ProyectoSistemaOptica.Shared\\ProyectoSistemaOptica.Shared.csproj|c:\\modelado y arq\\proyectosistemaoptica.server\\proyectosistemaoptica.shared\\dto\\detalleventadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D95DC6C4-ACE1-453E-9A25-BE89A4F0331F}|ProyectoSistemaOptica.Shared\\ProyectoSistemaOptica.Shared.csproj|solutionrelative:proyectosistemaoptica.shared\\dto\\detalleventadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07DB5AB5-948D-438F-9702-E0425A184837}|ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server.csproj|c:\\modelado y arq\\proyectosistemaoptica.server\\proyectosistemaoptica.server\\proyectosistemaoptica.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07DB5AB5-948D-438F-9702-E0425A184837}|ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server.csproj|solutionrelative:proyectosistemaoptica.server\\proyectosistemaoptica.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D95DC6C4-ACE1-453E-9A25-BE89A4F0331F}|ProyectoSistemaOptica.Shared\\ProyectoSistemaOptica.Shared.csproj|c:\\modelado y arq\\proyectosistemaoptica.server\\proyectosistemaoptica.shared\\dto\\productodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D95DC6C4-ACE1-453E-9A25-BE89A4F0331F}|ProyectoSistemaOptica.Shared\\ProyectoSistemaOptica.Shared.csproj|solutionrelative:proyectosistemaoptica.shared\\dto\\productodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D95DC6C4-ACE1-453E-9A25-BE89A4F0331F}|ProyectoSistemaOptica.Shared\\ProyectoSistemaOptica.Shared.csproj|c:\\modelado y arq\\proyectosistemaoptica.server\\proyectosistemaoptica.shared\\dto\\registrarventadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D95DC6C4-ACE1-453E-9A25-BE89A4F0331F}|ProyectoSistemaOptica.Shared\\ProyectoSistemaOptica.Shared.csproj|solutionrelative:proyectosistemaoptica.shared\\dto\\registrarventadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D95DC6C4-ACE1-453E-9A25-BE89A4F0331F}|ProyectoSistemaOptica.Shared\\ProyectoSistemaOptica.Shared.csproj|c:\\modelado y arq\\proyectosistemaoptica.server\\proyectosistemaoptica.shared\\dto\\ventalistadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D95DC6C4-ACE1-453E-9A25-BE89A4F0331F}|ProyectoSistemaOptica.Shared\\ProyectoSistemaOptica.Shared.csproj|solutionrelative:proyectosistemaoptica.shared\\dto\\ventalistadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2028497-9946-4FB9-B698-8079B68E1AB9}|ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server.Client\\ProyectoSistemaOptica.Server.Client.csproj|c:\\modelado y arq\\proyectosistemaoptica.server\\proyectosistemaoptica.server\\proyectosistemaoptica.server.client\\layout\\venta\\ventashistorial.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D2028497-9946-4FB9-B698-8079B68E1AB9}|ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server.Client\\ProyectoSistemaOptica.Server.Client.csproj|solutionrelative:proyectosistemaoptica.server\\proyectosistemaoptica.server.client\\layout\\venta\\ventashistorial.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2028497-9946-4FB9-B698-8079B68E1AB9}|ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server.Client\\ProyectoSistemaOptica.Server.Client.csproj|c:\\modelado y arq\\proyectosistemaoptica.server\\proyectosistemaoptica.server\\proyectosistemaoptica.server.client\\layout\\venta\\registrarventa.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D2028497-9946-4FB9-B698-8079B68E1AB9}|ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server.Client\\ProyectoSistemaOptica.Server.Client.csproj|solutionrelative:proyectosistemaoptica.server\\proyectosistemaoptica.server.client\\layout\\venta\\registrarventa.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2028497-9946-4FB9-B698-8079B68E1AB9}|ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server.Client\\ProyectoSistemaOptica.Server.Client.csproj|c:\\modelado y arq\\proyectosistemaoptica.server\\proyectosistemaoptica.server\\proyectosistemaoptica.server.client\\layout\\venta\\productoslista.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D2028497-9946-4FB9-B698-8079B68E1AB9}|ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server.Client\\ProyectoSistemaOptica.Server.Client.csproj|solutionrelative:proyectosistemaoptica.server\\proyectosistemaoptica.server.client\\layout\\venta\\productoslista.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,31 +38,97 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Modelado y Arq\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server\\Program.cs",
-              "RelativeDocumentMoniker": "ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server\\Program.cs",
-              "ToolTip": "C:\\Modelado y Arq\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server\\Program.cs",
-              "RelativeToolTip": "ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server\\Program.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAIwEMAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "VentaListadoDTO.cs",
+              "DocumentMoniker": "C:\\Modelado y Arq\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Shared\\DTO\\VentaListadoDTO.cs",
+              "RelativeDocumentMoniker": "ProyectoSistemaOptica.Shared\\DTO\\VentaListadoDTO.cs",
+              "ToolTip": "C:\\Modelado y Arq\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Shared\\DTO\\VentaListadoDTO.cs",
+              "RelativeToolTip": "ProyectoSistemaOptica.Shared\\DTO\\VentaListadoDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T22:18:42.927Z"
+              "WhenOpened": "2025-10-30T04:53:26.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RegistrarVentaDTO.cs",
+              "DocumentMoniker": "C:\\Modelado y Arq\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Shared\\DTO\\RegistrarVentaDTO.cs",
+              "RelativeDocumentMoniker": "ProyectoSistemaOptica.Shared\\DTO\\RegistrarVentaDTO.cs",
+              "ToolTip": "C:\\Modelado y Arq\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Shared\\DTO\\RegistrarVentaDTO.cs",
+              "RelativeToolTip": "ProyectoSistemaOptica.Shared\\DTO\\RegistrarVentaDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T04:53:05.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductoDTO.cs",
+              "DocumentMoniker": "C:\\Modelado y Arq\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Shared\\DTO\\ProductoDTO.cs",
+              "RelativeDocumentMoniker": "ProyectoSistemaOptica.Shared\\DTO\\ProductoDTO.cs",
+              "ToolTip": "C:\\Modelado y Arq\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Shared\\DTO\\ProductoDTO.cs",
+              "RelativeToolTip": "ProyectoSistemaOptica.Shared\\DTO\\ProductoDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T04:53:02.167Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "VentaController.cs",
-              "DocumentMoniker": "C:\\Modelado y Arq\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server\\Controllers\\VentaController.cs",
-              "RelativeDocumentMoniker": "ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server\\Controllers\\VentaController.cs",
-              "ToolTip": "C:\\Modelado y Arq\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server\\Controllers\\VentaController.cs",
-              "RelativeToolTip": "ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server\\Controllers\\VentaController.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAowB8AAABBAAAAAAAAAA==",
+              "Title": "DetalleVentaDTO.cs",
+              "DocumentMoniker": "C:\\Modelado y Arq\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Shared\\DTO\\DetalleVentaDTO.cs",
+              "RelativeDocumentMoniker": "ProyectoSistemaOptica.Shared\\DTO\\DetalleVentaDTO.cs",
+              "ToolTip": "C:\\Modelado y Arq\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Shared\\DTO\\DetalleVentaDTO.cs",
+              "RelativeToolTip": "ProyectoSistemaOptica.Shared\\DTO\\DetalleVentaDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T22:17:46.911Z",
+              "WhenOpened": "2025-10-30T04:52:58.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VentasHistorial.razor",
+              "DocumentMoniker": "C:\\Modelado y Arq\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server.Client\\Layout\\Venta\\VentasHistorial.razor",
+              "RelativeDocumentMoniker": "ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server.Client\\Layout\\Venta\\VentasHistorial.razor",
+              "ToolTip": "C:\\Modelado y Arq\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server.Client\\Layout\\Venta\\VentasHistorial.razor",
+              "RelativeToolTip": "ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server.Client\\Layout\\Venta\\VentasHistorial.razor",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-30T04:51:28.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RegistrarVenta.razor",
+              "DocumentMoniker": "C:\\Modelado y Arq\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server.Client\\Layout\\Venta\\RegistrarVenta.razor",
+              "RelativeDocumentMoniker": "ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server.Client\\Layout\\Venta\\RegistrarVenta.razor",
+              "ToolTip": "C:\\Modelado y Arq\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server.Client\\Layout\\Venta\\RegistrarVenta.razor",
+              "RelativeToolTip": "ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server.Client\\Layout\\Venta\\RegistrarVenta.razor",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAIIAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-30T04:40:03.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductosLista.razor",
+              "DocumentMoniker": "C:\\Modelado y Arq\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server.Client\\Layout\\Venta\\ProductosLista.razor",
+              "RelativeDocumentMoniker": "ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server.Client\\Layout\\Venta\\ProductosLista.razor",
+              "ToolTip": "C:\\Modelado y Arq\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server.Client\\Layout\\Venta\\ProductosLista.razor",
+              "RelativeToolTip": "ProyectoSistemaOptica.Server\\ProyectoSistemaOptica.Server.Client\\Layout\\Venta\\ProductosLista.razor",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-30T04:39:20.008Z",
               "EditorCaption": ""
             }
           ]

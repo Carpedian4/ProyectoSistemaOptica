@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProyectoSistemaOptica.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3911fd8ef2f0d17f403fc32ae1d1a0c684db944c")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProyectoSistemaOptica.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProyectoSistemaOptica.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
